@@ -1,0 +1,30 @@
+          <div class="page-header-inner">
+            <div class="row row--space-between row--vertically-centered">
+              <div>
+
+                <div class="page-header-columns row row--space-between row--vertically-centered">
+                  <div>
+                    <a href="/" class="brand-logo"><span>CSLOBBY.GG LAN</span></a>
+                  </div>
+                  <div>
+                    <span class="brand-slogan"></span>
+                  </div>
+                </div>
+
+              </div>
+              <div>
+
+                <div class="row row--space-between row--vertically-centered">
+                  {%- if not g.user.authenticated %}
+                  <div>
+{% include 'layout/_locale_selector.html' %}
+                  </div>
+                  {%- endif %}
+                  <div>
+{% include 'layout/_current_user.html' %}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
